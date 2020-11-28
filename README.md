@@ -66,6 +66,7 @@ function updateDOM(count){
 setInterval(updateDOM, 100);
 ```
 
+Even though we are creating an element describing the whole UI tree on every tick, only the text node whose contents have changed gets updated by React DOM.
 
 
 
@@ -73,9 +74,33 @@ setInterval(updateDOM, 100);
 ## 2. Conditional Rendering
 
 
+
+
+
 ## 3. Creating Re-Usable Components
 
 
+
+
 ## 4. Routing In React
+
+```
+import { BrowserRouter, Route } from 'react-router-dom';
+```
+
+
+```
+  <BrowserRouter>
+    <NavBar />
+    <Route exact path='/' component={Home} />
+    <Route exact path='/project' component={Project} />
+
+    <Route exact path='/blog' component={Blog} />
+    <Route exact path='/blog/first-blog' component={BlogDetail} />
+    <Route exact path='/blog/second-blog' component={BlogDetail} />
+  </BrowserRouter>
+```
+
+Note - The exact param comes into play when you have multiple paths that have similar names. 
 
 

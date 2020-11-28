@@ -1,4 +1,4 @@
-export const Project = [
+export const ProjectList = [
     {
         name: "Project Hunt",
         desc: "Explore new projects",
